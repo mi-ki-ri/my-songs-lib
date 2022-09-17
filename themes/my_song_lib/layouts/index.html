@@ -1,0 +1,13 @@
+{{define "main"}}
+<ul class="main">
+  {{ range .Site.RegularPages }}
+
+  <li class="card">
+    <h2>{{.Title}}</h2>
+    <div class="body">{{ .Content }}</div>
+    <p class="date">{{.Params.Date.Format "2006-01-02"}}</p>
+  </li>
+
+  {{end}}
+</ul>
+{{end}}
